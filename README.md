@@ -6,3 +6,6 @@
 - 嘗試 git clone 專案
 - 嘗試推送檔案
 - 加入 test.html
+
+## 0922
+- html網頁初體驗
