@@ -9,3 +9,6 @@
 
 ## 0922
 - html網頁初體驗
+
+## 10/13
+- css and bootstrap 製作作品集

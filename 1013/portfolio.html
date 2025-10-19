@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的作品集</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* 卡片 hover 效果 */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">陳韋恩 Wilson Chen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">作品</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="py-5 bg-light text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">個人作品集</h1>
+      <p class="lead mb-4">嗨我是淡江大學的學生，以下是我的作品集</p>
+      <a href="#portfolio" class="btn btn-info text-white me-2">瀏覽作品</a>
+      <a href="#contact" class="btn btn-outline-info">聯絡我</a>
+    </div>
+  </section>
+
+  <!-- 關於我 -->
+  <section id="about" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-info">關於我</h2>
+      <div class="row align-items-center">
+        <!-- 左欄照片 -->
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <img src="截圖 2025-09-25 晚上10.24.22.png" alt="個人照片" class="img-fluid rounded-circle shadow" style="max-width: 280px;">
+        </div>
+        <!-- 右欄文字 -->
+        <div class="col-md-7">
+          <div class="mb-4">
+            <h3 class="fw-bold text-secondary mb-3">個人基本資訊</h3>
+            <ul class="list-unstyled fs-5">
+              <li><strong>姓名：</strong>陳韋恩</li>
+              <li><strong>科系：</strong>資訊管理學系</li>
+              <li><strong>年級：</strong>三年級</li>
+              <li><strong>學號：</strong>412630781</li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="fw-bold text-secondary mb-3">興趣愛好</h3>
+            <ul class="fs-5">
+              <li>打 PC 或主機遊戲 🎮</li>
+              <li>看 Netflix 影集 🍿</li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="fw-bold text-secondary mb-3">未來目標</h3>
+            <p class="fs-5 text-muted">
+              我對資管領域充滿熱情，大四希望能找到實習機會，並同時準備考研究所。
+              未來會根據實習經驗決定要繼續升學或進入職場，
+              希望最終能投入軟體或硬體開發相關工作。
+            </p>
+            <div class="alert alert-info mt-3" role="alert">
+              💡 <strong>目標：</strong>成為能兼具商業思維與技術實作的資管人才！
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能展示 -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-info">我的技能</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 text-center p-3">
+            <img src="https://webdevmonk.com/main/html.png" class="img-fluid card-img-top mx-auto" alt="HTML">
+            <div class="card-body">
+              <h5 class="card-title">前端開發 <span class="badge bg-secondary">Intermediate</span></h5>
+              <p class="card-text">會使用HTML、CSS、JavaScript、Bootstrap 與 RWD 設計。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 text-center p-3">
+            <img src="https://niltechedu.com/blog/wp-content/uploads/2021/11/python-programming-language.png" class="img-fluid card-img-top mx-auto" alt="Backend">
+            <div class="card-body">
+              <h5 class="card-title">後端技術 <span class="badge bg-secondary">Intermediate</span></h5>
+              <p class="card-text">能使用 Java、Python 與 MySQL 建立後端服務。</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 text-center p-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXdv6tr7dRtXMwC1ckzeNSMGQjYWJ27IW3w&s" class="img-fluid card-img-top mx-auto" alt="UI/UX">
+            <div class="card-body">
+              <h5 class="card-title">UI / UX 設計 <span class="badge bg-secondary">Intermediate</span></h5>
+              <p class="card-text">會打造簡易的介面。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集 -->
+  <section id="portfolio" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-info">作品集</h2>
+      <div class="row">
+        <!-- 作品1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">9/16 作業：GitHub & HTML 基本操作</h5>
+              <p class="card-text">展示 GitHub 使用與 HTML 基本操作練習。</p>
+              <a href="https://github.com/Wilson0503/114_tkuim_web" class="btn btn-outline-info">查看作品</a>
+            </div>
+          </div>
+        </div>
+        <!-- 作品2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">9/22 作業：個人自介網頁</h5>
+              <p class="card-text">我的自我介紹網頁作品，包含照片與個人資訊。</p>
+              <a href="https://github.com/Wilson0503/114_tkuim_web/blob/main/aboutme.html" class="btn btn-outline-info">查看作品</a>
+            </div>
+          </div>
+        </div>
+        <!-- 作品3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">10/7 作業：JavaScript Console 練習</h5>
+              <p class="card-text">透過 JS Console 操作並學習基本 JavaScript 技巧。</p>
+              <a href="https://hackmd.io/@FTju7F64SmqXTr0h9DINUA/HJxdM7Spee" class="btn btn-outline-info">查看作品</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡表單 -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold text-info">聯絡我</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">姓名</label>
+              <input type="text" class="form-control" id="name" placeholder="請輸入您的姓名" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="請輸入您的 Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">主旨</label>
+              <input type="text" class="form-control" id="subject" placeholder="聯絡主題" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">訊息</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="請輸入您的訊息..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-info text-white w-100">送出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">
+        <a href="#" class="text-white me-3">Facebook</a>
+        <a href="#" class="text-white me-3">Instagram</a>
+        <a href="#" class="text-white">GitHub</a>
+      </p>
+      <p class="mb-0">© 2025 Wayne Chen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

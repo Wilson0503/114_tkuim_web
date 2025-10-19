@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 測試</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+    #myButton {
+      background-color: #3498db;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+        }
+    #myButton:hover {
+      background-color: #2980b9;
+    }
+    #message {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Console 測試</h1>
+  <button id="myButton">點我測試</button>
+  <div id="message">這裡會顯示訊息</div>
+  <p id="demo">這是一個段落</p>
+  <input type="text" id="nameInput" placeholder="輸入你的名字">
+  <script>
+    let button = document.getElementById("myButton");
+console.log(button);
+    let message = document.getElementById("message");
+console.log(message);
+  message.textContent = "內容已經被 JavaScript 改變了！";
+    message.style.color = "red";
+message.style.fontSize = "24px";
+    let nameInput = document.getElementById("nameInput");
+    nameInput.value;
+    document.getElementById("demo").innerHTML = "<strong>文字已更新！</strong>";
+    let newPara = document.createElement("p");
+newPara.textContent = "這是用 JavaScript 新增的段落";
+newPara.style.color = "blue";
+document.body.appendChild(newPara);
+button.addEventListener("click", function() {
+  let userName = nameInput.value;
+  if (userName) {
+    message.textContent = "你好，" + userName + "！";
+    message.style.color = "green";
+  } else {
+    message.textContent = "請先輸入名字！";
+    message.style.color = "orange";
+  }
+});
+  </script>
+</body>
+</html>
