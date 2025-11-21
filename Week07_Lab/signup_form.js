@@ -119,6 +119,8 @@ terms.addEventListener('click', (event) => {
 // 送出攔截與防重送
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  // ------- 前端驗證（保持原樣） -------
   const inputs = form.querySelectorAll('input[required]');
   let firstInvalid = null;
 
@@ -138,27 +140,43 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
+  // ------- 防重送 -------
   submitBtn.disabled = true;
   submitBtn.textContent = '註冊中...';
-  await new Promise((r) => setTimeout(r, 1000));
 
-  alert('註冊成功！');
-  form.reset();
-  clearFormData(); // 成功送出後清除暫存
+  // ------- 整理資料送 API -------
+  const payload = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    password: document.getElementById("password").value,
+    confirm: document.getElementById("confirm").value,
+    interests: Array.from(
+      interests.querySelectorAll("input:checked")
+    ).map((i) => i.value),
+    terms: document.getElementById("terms").checked
+  };
+
+  try {
+    const res = await fetch("http://localhost:3000/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert("註冊失敗：\n" + data.errors.join("\n"));
+    } else {
+      alert("註冊成功！");
+      form.reset();
+      clearFormData();
+    }
+  } catch (err) {
+    alert("伺服器錯誤，請稍後再試");
+  }
+
   submitBtn.disabled = false;
-  submitBtn.textContent = '註冊';
-  document.getElementById('strength-level').style.width = '0';
-  document.getElementById('strength-text').textContent = '';
+  submitBtn.textContent = "註冊";
 });
-
-// 重設按鈕
-resetBtn.addEventListener('click', () => {
-  form.reset();
-  clearFormData();
-  form.querySelectorAll('.text-danger').forEach((el) => (el.textContent = ''));
-  document.getElementById('strength-level').style.width = '0';
-  document.getElementById('strength-text').textContent = '';
-});
-
-// 頁面載入時恢復暫存資料
-restoreFormData();

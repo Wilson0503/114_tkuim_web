@@ -1,0 +1,16 @@
+### POST 註冊
+POST http://localhost:3000/api/signup
+Content-Type: application/json
+
+{
+  "name": "John",
+  "email": "john@test.com",
+  "phone": "0911222333",
+  "password": "Abc12345",
+  "confirm": "Abc12345",
+  "interests": ["sport"],
+  "terms": true
+}
+
+### GET 清單
+GET http://localhost:3000/api/signup

@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "20c7e79a-f231-40c1-8c35-f625130a9c9c",
+		"name": "Week09 Signup API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50255454",
+		"_collection_link": "https://wilson82277095-9604677.postman.co/workspace/43e2b542-fee4-4dc4-8c74-5211dc9603d2/collection/50255454-20c7e79a-f231-40c1-8c35-f625130a9c9c?action=share&source=collection_link&creator=50255454"
+	},
+	"item": [
+		{
+			"name": "POST Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Test\",\"email\":\"a@a.com\",\"phone\":\"0911222333\",\"password\":\"Abc12345\",\"confirm\":\"Abc12345\",\"interests\":[\"sport\"],\"terms\":true}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Signup List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
