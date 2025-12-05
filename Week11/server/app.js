@@ -5,7 +5,7 @@ import { connectDB } from './db.js';
 import signupRouter from './routes/signup.js';
 
 const app = express();
-app.use(cors({ origin: process.env.ALLOWED_ORIGIN }));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/signup', signupRouter);

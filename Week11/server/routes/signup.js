@@ -1,5 +1,6 @@
 // server/routes/signup.js
 import express from 'express';
+import { ObjectId } from 'mongodb'; 
 import {
   createParticipant,
   listParticipants,
@@ -18,18 +19,26 @@ router.post('/', async (req, res, next) => {
     const id = await createParticipant({ name, email, phone });
     res.status(201).json({ id });
   } catch (error) {
+    if (error.code === 11000) { // Mongo 唯一索引衝突
+      return res.status(400).json({ error: '此 email 已報名過' });
+    }
     next(error);
   }
 });
 
+
 router.get('/', async (req, res, next) => {
   try {
-    const participants = await listParticipants();
-    res.json({ items: participants, total: participants.length });
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+
+    const { items, total } = await listParticipants(page, limit);
+    res.json({ items, total });
   } catch (error) {
     next(error);
   }
 });
+
 
 router.patch('/:id', async (req, res, next) => {
   try {
@@ -45,7 +54,7 @@ router.patch('/:id', async (req, res, next) => {
 
 router.delete('/:id', async (req, res, next) => {
   try {
-    const result = await deleteParticipant(req.params.id);
+        const result = await deleteParticipant(req.params.id.trim());
     if (!result.deletedCount) {
       return res.status(404).json({ error: '找不到資料' });
     }
