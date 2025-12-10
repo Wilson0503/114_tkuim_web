@@ -1,5 +1,0 @@
-exit
-cd ..
-db.participants.find()
-show collections
-use week11
