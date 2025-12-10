@@ -28,6 +28,13 @@ npm run dev
 4. 連線 MongoDB 失敗
 - 檢查 .env 中 URI、帳號、密碼設定是否正確。
 - 確認 Docker 容器已啟動並運作正常。
+  
+## MongoDB Compass 資料結構截圖
+
+下圖為 participants 集合內容：
+
+![MongoDB Compass – participants](./images/compass_participants.png)
+
 
 | .env 欄位            | 用途                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------- |
