@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will of Fire</title>
+    <style>
+        :root {
+            --ninja-black: #111;
+            --naruto-orange: #F85B1A;
+            --chakra-glow: rgba(248, 91, 26, 0.4);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--ninja-black);
+            font-family: 'Arial Black', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* The Main Container */
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* The Giant Orange Circle (Sun/Seal) */
+        .symbol {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background-color: var(--naruto-orange);
+            border-radius: 50%;
+            z-index: -1;
+            box-shadow: 0 0 100px var(--chakra-glow);
+            border: 10px solid #fff;
+        }
+
+        h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            margin: 0 0 20px 0;
+            text-shadow: 5px 5px 0px #000;
+            position: relative;
+        }
+
+        /* The Decorative Lines */
+        h1::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 10px;
+            background: #fff;
+            margin: 20px auto;
+        }
+
+        /* CTA Button */
+        .btn-enter {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--ninja-black);
+            background-color: #fff;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 5px solid var(--naruto-orange);
+            box-shadow: 10px 10px 0px var(--naruto-orange);
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-enter:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 15px 15px 0px var(--naruto-orange);
+            background-color: #f0f0f0;
+        }
+
+        .btn-enter:active {
+            transform: translate(0, 0);
+            box-shadow: 5px 5px 0px var(--naruto-orange);
+        }
+
+        /* Floating particles (pure CSS) */
+        .particle {
+            position: absolute;
+            background: #fff;
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float-up 5s linear infinite;
+            z-index: -2;
+        }
+
+        .p1 {
+            width: 20px;
+            height: 20px;
+            left: 20%;
+            bottom: -20px;
+            animation-duration: 7s;
+        }
+
+        .p2 {
+            width: 50px;
+            height: 50px;
+            left: 80%;
+            bottom: -50px;
+            animation-duration: 10s;
+        }
+
+        .p3 {
+            width: 10px;
+            height: 10px;
+            left: 50%;
+            bottom: -10px;
+            animation-duration: 4s;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+
+    <div class="symbol"></div>
+
+    <div class="container">
+        <h1>火之意志</h1>
+        <a href="jutsu.html" class="btn-enter">進入忍者世界</a>
+    </div>
+
+</body>
+
+</html>
